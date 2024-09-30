@@ -59,3 +59,27 @@ public class CustomerHomeFrame extends JFrame implements ActionListener
 		this.add(panel);
 	}
 	
+	public void actionPerformed(ActionEvent ae)
+	{
+		String command = ae.getActionCommand();
+
+		if(command.equals("Estimate medicines"))
+		{
+			// Open the new SearchMedicinesFrame
+			PurchaseMedicinesFrame smf = new PurchaseMedicinesFrame();
+			smf.setVisible(true);
+			this.setVisible(false);
+		}
+
+
+		else if(command.equals("Logout"))
+		{
+
+			LoginFrame lf = new LoginFrame();
+			lf.setVisible(true);
+			this.setVisible(false); // Hide the current frame
+		}
+
+	}
+
+}
